@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Орлов](https://up.htmlacademy.ru/adaptive/6/user/166811).
-* Наставник: `Неизвестно`.
+* Наставник: [Софья Ильинова] (https://htmlacademy.ru/profile/i).
 
 ---
 
