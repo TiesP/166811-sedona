@@ -1,11 +1,51 @@
 .recommendation {
   background-color: @color-white;
+  margin: 0px auto;
+  text-align: left;
+  width: 320px;
+  @media @tablet-widths {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display: block;
+    width: 256px;
+    min-height: 332px;
+    float: left;
+  }
+  @media @desktop-widths {
+    width: 400px;
+  }
+}
+
+.recommendation--right {
+  @media @tablet-widths {
+    float: right;
+  }
 }
 
 .recommendation__title {
   .font-setting-uppercase(18px);
+  margin-left: 70px;
+  margin-top: 20px;
+  padding-top: 12px;
+  @media @tablet-widths {
+    margin: 0px;
+    margin-top: 160px;
+    padding: 0px;
+  }
 }
 
 .recommendation__text {
   .font-setting-uppercase(14px, normal);
+  margin-left: 70px;
+  padding-right: 20px;
+  @media @tablet-widths {
+    margin: 0px auto;
+    padding: 0px;
+    padding-top: 20px;
+    width: 166px;
+  }
+  @media @desktop-widths {
+    width: 274px;
+  }
 }

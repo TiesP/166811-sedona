@@ -1,11 +1,60 @@
 .page-footer {
   background-color: @color-gray-lightest;
+  margin: 0 auto;
+  text-align: center;
+  width: 320px;
+  min-height: 250px;
+  @media @tablet-widths {
+    width: 768px;
+    min-height: 118px;
+  }
+  @media @desktop-widths {
+    width: 1200px;
+  }
 }
 
 .page-footer__tag {
   .font-setting-uppercase(21px);
+  margin-top: 30px;
+  @media @tablet-widths {
+    display: inline-block;
+    margin-right: 110px;
+    margin-top: 10px;
+  }
+  @media @desktop-widths {
+    margin-left: 80px;
+    margin-right: 250px;
+  }
+}
+
+.page-footer__social {
+  margin-top: 30px;
+  @media @tablet-widths {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 110px;
+  }
+  @media @desktop-widths {
+    margin-right: 220px;
+  }
 }
 
 .page-footer__copyright {
+  margin: 0px auto;
+  width: 130px;
+  height: 50px;
+  margin-top: 40px;
+  background: url("../../img/logo-htmlacademy.svg") no-repeat 100px 0px;
+  @media @tablet-widths {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  @media @desktop-widths {
+    margin-left: 120px;
+  }
+}
+
+.page-footer__copyright-text {
   .font-setting-uppercase(14px, normal);
+  margin-right: 40px;
 }
