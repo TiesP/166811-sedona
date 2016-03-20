@@ -1,139 +1,137 @@
 .advantage {
-  width: 320px;
-  margin: 0px auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
-  @media @tablet-widths {
-    width: 256px;
-    margin: 0px;
-  }
-  @media @desktop-widths {
-    width: 400px;
-  }
-}
-
-.advantages-other {
-  @media @tablet-widths {
-    margin: 0px auto;
-    width: 768px;
-    display: table;
-  }
-  @media @desktop-widths {
-    width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media @tablet-width {
+    flex-direction: row;
+    margin: 0;
   }
 }
 
-.advantages-other .advantage {
-  @media @tablet-widths {
-    display: table-cell;
+.advantages {
+  margin: 0 auto;
+  @media @tablet-width {
+    display: flex;
   }
 }
 
-.advantage--first {
-  min-height: 855px;
-  @media @tablet-widths {
-    min-height: 588px;
-    width: 768px;
-    margin: 0px auto;
-  }
-  @media @desktop-widths {
-    min-height: 588px;
-    width: 1200px;
-  }
-}
-
-.advantage--second {
-  min-height: 452px;
-  @media @tablet-widths {
-    min-height: 256px;
-    width: 768px;
-    margin: 0px auto;
-  }
-  @media @desktop-widths {
-    width: 1200px;
+.advantage--other {
+  @media @tablet-width {
+    width: 33.333333%;
   }
 }
 
 .advantage__header {
   background-color: @color-gray-light;
-  margin: 0px auto;
-  padding: 0px 20px 0 20px;
-  @media @tablet-widths {
-    padding: 0px;
-    margin: 0px;
-    width: 256px;
+  padding: 0;
+  width: 100%;
+}
+
+.advantage--first .advantage__header {
+  @media @tablet-width {
+    width: 33%;
   }
-  @media @desktop-widths {
-    width: 400px;
+}
+
+.advantage--second .advantage__header {
+  @media @tablet-width {
+    order: 2;
+    width: 33%;
   }
 }
 
 .advantage__header--dark-bg {
   background-color: @color-blue-light;
   color: @color-white;
-  min-height: 184px;
-  padding: 10px 10px 0 10px;
-  @media @tablet-widths {
+  @media @tablet-width {
     display: inline-block;
     float: left;
-    padding: 0px;
-    min-height: 256px;
+    padding: 0;
   }
 }
 
-.advantage__header--right {
-  @media @tablet-widths {
-    float: right;
+.advantage__photo {
+  width: 320px;
+  height: 260px;
+  @media @tablet-width {
+    width: 512px;
+    height: 256px;
   }
 }
 
-.advantage__container {
-  width: 280px;
-  margin: 0px auto;
-  min-height: 166px;
-  @media @tablet-widths {
-    min-height: 256px;
-    width: 256px;
+.advantage__photo--first {
+  background-image: url("../img/photo-city.jpg");
+  background-position: center top;
+  background-size: 162%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  @media @tablet-width {
+    background-size: 100%;
   }
 }
 
-.advantage__container--border {
-  border-bottom: 1px @color-gray solid;
-  @media @tablet-widths {
-    border-bottom: none;
+.advantage__photo--second {
+  background-image: url("../img/photo-bridge.jpg");
+  background-position: center top;
+  background-size: 162%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  @media @tablet-width {
+    background-size: 100%;
+  }
+}
+
+.advantage__recommendations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 38px;
+  @media @tablet-width {
+    flex-direction: row;
+    margin-bottom: 62px;
+  }
+  @media @desktop-width {
+    margin-bottom: 82px;
   }
 }
 
 .advantage__title {
   .font-setting-uppercase(18px);
-  padding: 0px;
-  padding-top: 25px;
-  margin: 0 auto;
-  @media @tablet-widths {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  @media @tablet-width {
     .font-setting-uppercase(21px);
-    padding: 0px;
-    padding-top: 44px;
+    margin-top: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
     line-height: 1.3;
-    width: 153px;
   }
-  @media @desktop-widths {
-    padding-top: 50px;
+  @media @desktop-width {
+    margin-top: 50px;
+    padding-left: 122px;
+    padding-right: 122px;
   }
 }
 
-.advantages-other .advantage__title {
-  @media @desktop-widths {
-    padding-top: 42px;
+.advantage--other .advantage__title {
+  margin-top: 25px;
+  @media @tablet-width {
+    margin-top: 44px;
   }
 }
 
 .advantage__number {
   .font-setting-uppercase(14px, normal);
-  padding: 0px;
-  padding-top: 9px;
-  margin: 0 auto;
-  @media @tablet-widths {
-    padding: 0px;
-    padding-top: 10px;
+  padding: 0;
+  margin: 0;
+  margin-top: 9px;
+  @media @tablet-width {
+    margin-top: 10px;
   }
 }
 
@@ -149,58 +147,47 @@
 
 .advantage__text {
   .font-setting-uppercase(14px, normal);
+  padding: 0;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0;
+  margin-top: 18px;
+  margin-bottom: 40px;
+  @media @tablet-width {
+    margin-top: 22px;
+    margin-bottom: 42px;
+  }
+  @media @desktop-width {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+.advantage--other .advantage__text {
+  margin-bottom: 28px;
+  @media @mobile-width-only {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @media @tablet-width {
+    margin-bottom: 47px;
+  }
+  @media @desktop-width {
+    margin-bottom: 65px;
+  }
+}
+
+.advantage__container {
+  width: 87.5%;
   margin: 0 auto;
-  padding: 16px 10px;
-  @media @tablet-widths {
-    padding: 0px;
-    padding-top: 22px;
-    width: 150px;
-  }
-  @media @desktop-widths {
-    width: 265px;
+  @media @tablet-width {
+    width: 100%;
   }
 }
 
-.advantage__photo {
-  @media @tablet-widths {
-    display: inline-block;
-  }
-}
-
-.advantage__photo--first {
-  background-image: url("../img/photo-city.jpg");
-  background-position: center top;
-  width: 320px;
-  height: 260px;
-  background-size: 162%;
-  background-repeat: no-repeat;
-  margin: 0px auto;
-  @media @tablet-widths {
-    width: 512px;
-    height: 256px;
-    float: right;
-    background-size: 100%;
-  }
-  @media @desktop-widths {
-    width: 800px;
-  }
-}
-
-.advantage__photo--second {
-  background-image: url("../img/photo-bridge.jpg");
-  background-position: center top;
-  width: 320px;
-  height: 260px;
-  background-size: 162%;
-  background-repeat: no-repeat;
-  margin: 0px auto;
-  @media @tablet-widths {
-    width: 512px;
-    height: 256px;
-    float: left;
-    background-size: 100%;
-  }
-  @media @desktop-widths {
-    width: 800px;
+.advantage__container--border {
+  border-bottom: 1px @color-gray solid;
+  @media @tablet-width {
+    border-bottom: none;
   }
 }
