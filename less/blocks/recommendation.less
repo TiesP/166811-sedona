@@ -1,11 +1,52 @@
 .recommendation {
   background-color: @color-white;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+  @media @tablet-width {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 33.33333%;
+  }
+}
+
+.recommendation--right {
+  @media @tablet-width {
+    order: 3;
+  }
 }
 
 .recommendation__title {
   .font-setting-uppercase(18px);
+  margin: 0;
+  margin-left: 70px;
+  margin-top: 35px;
+  padding: 0;
+  @media @tablet-width {
+    .font-setting-uppercase(20px);
+    margin-top: 160px;
+    margin-left: 0;
+  }
 }
 
 .recommendation__text {
   .font-setting-uppercase(14px, normal);
+  margin: 0;
+  margin-left: 70px;
+  margin-top: 12px;
+  padding: 0;
+  padding-right: 42px;
+
+  @media @tablet-width {
+    margin-top: 18px;
+    margin-left: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  @media @desktop-width {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
 }

@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1">
   <title>Главная</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -10,33 +13,32 @@
 <header class="page-header">
 
   <nav class="main-nav">
-    <span class="main-nav__close">&#215;</span>
     <ul class="main-nav__items">
       <li class="main-nav__item"><a class="main-nav__url" href="index.html">Главная</a></li>
       <li class="main-nav__item"><a class="main-nav__url" href="photo.html">Фото и видео</a></li>
       <li class="main-nav__item"><a class="main-nav__url" href="form.html">Форма отзыва</a></li>
       <li class="main-nav__item"><a class="main-nav__url" href="https://htmlacademy.ru/">Html academy</a></li>
     </ul>
-    <span class="main-nav__toggle"></span>
   </nav>
 
-  <section class="header-logo">
+  <div class="page-header__main-nav-toggle "></div>
 
-    <div class="header-logo__title">Welcome</div>
-    <div class="header-logo__subtitle">to the gorgeous</div>
-    <img class="header-logo__place" src="http://placehold.it/280x50" alt="Sedona">
+  <div class="page-header__wrapper">
+    <div class="page-header__logo"></div>
+    <section class="header-logo"></section>
+  </div>
 
-    <div class="header-logo__quote">“Because the Grand Canyon sucks!”</div>
-  </section>
 
-  <h2 class="page-header__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+  <h2 class="page-header__title">
+    Седона — небольшой городок в Аризоне, заслуживающий большего!
+  </h2>
 
   <p class="page-header__text">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон</p>
 </header>
 
 <main>
 
-  <section class="advantage advantage--dark-bg">
+  <div class="advantage advantage--first">
     <div class="advantage__header advantage__header--dark-bg">
       <h2 class="advantage__title">Настоящий городок</h2>
 
@@ -44,72 +46,80 @@
 
       <p class="advantage__text">Седона не атракцион для туристов, там течет своя жизнь</p>
     </div>
-    <img class="advantage__photo" src="http://placehold.it/320x260" alt="">
 
-    <div class="recommendation">
-      <img class="recommendation__img" src="http://placehold.it/40x40" alt="">
-      <span class="recommendation__title">Жилье</span>
+    <div class="advantage__photo advantage__photo--first"></div>
 
-      <p class="recommendation__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+    <div class="advantage__recommendations">
+      <div class="recommendation">
+        <div class="recommendation__title">Жилье</div>
+
+        <p class="recommendation__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+
+      <div class="recommendation recommendation--right">
+        <div class="recommendation__title">Сувениры</div>
+
+        <p class="recommendation__text">Не только китайского, но и местного производства!</p>
+      </div>
+
+      <div class="recommendation">
+        <div class="recommendation__title">Еда</div>
+
+        <p class="recommendation__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
     </div>
+  </div>
 
-    <div class="recommendation">
-      <img class="recommendation__img" src="http://placehold.it/40x40" alt="">
-      <span class="recommendation__title">Сувениры</span>
-
-      <p class="recommendation__text">Не только китайского, но и местного производства!</p>
-    </div>
-
-    <div class="recommendation">
-      <img class="recommendation__img" src="http://placehold.it/40x40" alt="">
-      <span class="recommendation__title">Еда</span>
-
-      <p class="recommendation__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-    </div>
-  </section>
-
-  <section class="advantage">
+  <div class="advantage advantage--second">
     <div class="advantage__header advantage__header--dark-bg">
       <h2 class="advantage__title">Там есть мост дьявола</h2>
 
       <p class="advantage__number">№2</p>
 
-      <p class="advantage__text">Да, по нему можно пройти! Если вы конечно осмелитесь</p>
+      <p class="advantage__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
-    <img class="advantage__photo" src="http://placehold.it/320x260" alt="">
-  </section>
+    <div class="advantage__photo advantage__photo--second"></div>
+  </div>
 
-  <section class="advantage">
-    <div class="advantage__header advantage__header--border">
-      <h2 class="advantage__title">Небольшая площадь</h2>
+  <div class="advantages">
+    <div class="advantage advantage--other">
+      <div class="advantage__header">
+        <div class="advantage__container advantage__container--border">
+          <h2 class="advantage__title">Небольшая площадь</h2>
 
-      <p class="advantage__number">№3</p>
+          <p class="advantage__number">№3</p>
 
-      <p class="advantage__text">Все достопримечательности находятся очень близко</p>
+          <p class="advantage__text">Все достопримеча&shy;тельности находятся очень близко</p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section class="advantage">
-    <div class="advantage__header advantage__header--border">
-      <h2 class="advantage__title">Красивая дорога</h2>
+    <div class="advantage advantage--other">
+      <div class="advantage__header">
+        <div class="advantage__container advantage__container--border">
+          <h2 class="advantage__title">Красивая дорога</h2>
 
-      <p class="advantage__number">№4</p>
+          <p class="advantage__number">№4</p>
 
-      <p class="advantage__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="advantage__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section class="advantage">
-    <div class="advantage__header">
-      <h2 class="advantage__title">Мало туристов</h2>
+    <div class="advantage advantage--other">
+      <div class="advantage__header">
+        <div class="advantage__container">
+          <h2 class="advantage__title">Мало туристов</h2>
 
-      <p class="advantage__number">№5</p>
+          <p class="advantage__number">№5</p>
 
-      <p class="advantage__text">Большинство едет в Гранд Каньон и толпится там</p>
+          <p class="advantage__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section class="search-hotel">
+  <div class="search-hotel">
     <h1 class="search-hotel__title">Заинтересовались?</h1>
 
     <p class="search-hotel__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц
@@ -117,9 +127,9 @@
     </p>
     <button class="search-hotel__button">Найти гостиницу</button>
     <div class="search-hotel__map">
-      <img src="http://placehold.it/320x350" alt="">
+      <img src="img/bg-map-mobile.jpg" alt="">
     </div>
-  </section>
+  </div>
 
 </main>
 
@@ -127,14 +137,22 @@
   <div class="page-footer__tag">#visitsedona</div>
   <section class="page-footer__social">
     <div class="social-links">
-      <a class="social-link  social-link--tw" href=""><img class="social-link__img" src="http://placehold.it/50x50" alt="twitter"></a>
-      <a class="social-link  social-link--fb" href=""><img class="social-link__img" src="http://placehold.it/50x50" alt="facebook"></a>
-      <a class="social-link  social-link--yo" href=""><img class="social-link__img" src="http://placehold.it/50x50" alt="youtube"></a>
+      <a class="social-link  social-link--tw" href="">
+        <img class="social-link__img" src="http://placehold.it/50x50" alt="twitter">
+      </a>
+      <a class="social-link  social-link--fb" href="">
+        <img class="social-link__img" src="http://placehold.it/50x50" alt="facebook">
+      </a>
+      <a class="social-link  social-link--yo" href="">
+        <img class="social-link__img" src="http://placehold.it/50x50" alt="youtube">
+      </a>
     </div>
   </section>
   <section class="page-footer__copyright">
-    Разработано
-    <a class="page-footer__copyright-link" href=""><img class="page-footer__img" src="http://placehold.it/50x50" alt="html academy"></a>
+    <span class="page-footer__copyright-text">Разработано</span>
+    <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
+      <img class="page-footer__img" src="img/logo-htmlacademy.svg" alt="html academy">
+    </a>
   </section>
 </footer>
 
