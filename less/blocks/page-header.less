@@ -1,6 +1,5 @@
 .page-header {
   margin: 0;
-  width: 100%;
   position: relative;
 }
 
@@ -25,6 +24,57 @@
   right: 0;
 }
 
+.page-header__logo-back {
+  background-repeat: no-repeat;
+  background-image: url("../img/text-sedona-index.svg"),
+  url("../img/bg-back-mobile.jpg");
+  background-position: center 146px,
+  center 56px;
+  background-size: 88%,
+  auto;
+  min-height: 446px;
+  width: 320px;
+  margin: 0 auto;
+  @media @tablet-width {
+    min-height: 520px;
+    width: 768px;
+    background-image: url("../img/text-sedona-index.svg"),
+    url("../img/bg-back-mobile.jpg");
+    background-position: center 78px,
+    center 6px;
+    background-size: 60%,
+    132%;
+  }
+  @media @desktop-width {
+  }
+}
+
+.page-header--other .page-header__logo-back {
+  background-repeat: no-repeat;
+  background-image: url("../img/text-sedona.svg"),
+  url("../img/bg-back-mobile.jpg");
+  background-position: center 146px,
+  center 56px;
+  background-size: 88%,
+  auto;
+  min-height: 214px;
+  width: 320px;
+  margin: 0 auto;
+  @media @tablet-width {
+    min-height: 290px;
+    width: 768px;
+    background-image: url("../img/text-sedona.svg"),
+    url("../img/bg-back-mobile.jpg");
+    background-position: center 78px,
+    center 6px;
+    background-size: 60%,
+    132%;
+  }
+  @media @desktop-width {
+    min-height: 302px;
+  }
+}
+
 .page-header__title {
   .font-setting-uppercase(18px);
   padding: 0;
@@ -46,20 +96,47 @@
   }
 }
 
+.page-header--other .page-header__title {
+  @media @tablet-width {
+    font-size: 30px;
+    margin-top: 68px;
+    letter-spacing: 0.5px;
+  }
+  @media @desktop-width {
+    margin-top: 105px;
+  }
+}
+
 .page-header__text {
   .font-setting-uppercase(14px, normal);
-  line-height: 1.9;
+  line-height: 1.7;
   padding: 0;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 18px;
   margin: 0 auto;
   margin-top: 28px;
-  margin-bottom: 40px;
   text-align: center;
   @media @tablet-width {
     margin-top: 30px;
     margin-bottom: 50px;
+    padding-left: 140px;
+    padding-right: 140px;
   }
+  @media @desktop-width {
+    padding-left: 380px;
+    padding-right: 380px;
+    margin-bottom: 35px;
+  }
+}
+
+.page-header__text--index {
+  line-height: 1.8;
+}
+
+.page-header__triangle {
+  height: 17px;
+  background: red;
 }
 
 @media @mobile-width-only {
