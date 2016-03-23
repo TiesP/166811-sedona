@@ -16,21 +16,37 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  @media @tablet-width {
+    margin-top: 9px;
+  }
 }
 
 .radio__label {
   margin: 0;
-  margin-left: 22px;
+  margin-top: 11px;
   padding: 0;
+  display: block;
+}
+
+input + .radio__label:before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 20px;
+  vertical-align: middle;
+  background: @color-edit;
+  border: 18px solid @color-edit;
+  border-radius: 50%;
+}
+
+input:checked + .radio__label:before {
+  background: @color-radio-check;
+}
+
+input:checked + .radio__label {
 }
 
 .radio__value {
-  width: 55px;
-  height: 55px;
-  margin: 0;
-  margin-top: 14px;
-  margin-left: 0px;
-  @media @tablet-width {
-    margin-top: 22px;
-  }
+  display: none;
 }
