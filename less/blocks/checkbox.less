@@ -10,6 +10,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 10px;
   }
   @media @desktop-width {
     justify-content: space-between;
@@ -24,16 +25,17 @@
   margin-top: 25px;
   @media @tablet-width {
     width: 40%;
+    margin-top: 32px;
   }
   @media @desktop-width {
-    width: 21%;
+    width: 20%;
   }
 }
 
 .checkbox__wrapper:nth-child(1) {
   margin-top: 0;
   @media @tablet-width {
-    margin-top: 25px;
+    margin-top: 32px;
   }
 }
 
@@ -54,6 +56,25 @@
     order: 4;
   }
 }
+
+@media @desktop-width {
+  .checkbox__wrapper:nth-child(1) {
+    width: 22%;
+  }
+
+  .checkbox__wrapper:nth-child(2) {
+    width: 22%;
+  }
+
+  .checkbox__wrapper:nth-child(3) {
+  }
+
+  .checkbox__wrapper:nth-child(4) {
+    width: 21%;
+  }
+
+}
+
 
 .checkbox__label {
   margin: 0;
