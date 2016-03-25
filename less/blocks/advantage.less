@@ -1,5 +1,4 @@
 .advantage {
-  width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -28,7 +27,6 @@
 .advantage__header {
   background-color: @color-gray-light;
   padding: 0;
-  width: 100%;
 }
 
 .advantage--first .advantage__header {
@@ -55,34 +53,22 @@
 }
 
 .advantage__photo {
-  width: 320px;
   height: 260px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
   @media @tablet-width {
-    width: 512px;
     height: 256px;
+    width: 67%;
   }
 }
 
 .advantage__photo--first {
   background-image: url("../img/photo-city.jpg");
-  background-position: center top;
-  background-size: 162%;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  @media @tablet-width {
-    background-size: 100%;
-  }
 }
 
 .advantage__photo--second {
   background-image: url("../img/photo-bridge.jpg");
-  background-position: center top;
-  background-size: 162%;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  @media @tablet-width {
-    background-size: 100%;
-  }
 }
 
 .advantage__recommendations {
@@ -108,7 +94,7 @@
   margin-top: 38px;
   @media @tablet-width {
     .font-setting-uppercase(21px);
-    margin-top: 44px;
+    margin-top: 45px;
     padding-left: 50px;
     padding-right: 50px;
     line-height: 1.3;

@@ -1,6 +1,21 @@
 .page-header {
-  margin: 0;
+  max-width: 1200px;
+  background-color: white;
+  margin: 0 auto;
   position: relative;
+  @media @tablet-width {
+    padding-bottom: 50px;
+  }
+}
+
+.page-header--other {
+  padding-bottom: 18px;
+  @media @tablet-width {
+    padding-bottom: 68px;
+  }
+  @media @desktop-width {
+    padding-bottom: 26px;
+  }
 }
 
 .page-header__wrapper {
@@ -26,24 +41,30 @@
 
 .page-header__logo-back {
   background-repeat: no-repeat;
-  background-image: url("../img/text-sedona-index.svg"),
-  url("../img/bg-back-mobile.jpg");
-  background-position: center 146px,
-  center 56px;
-  background-size: 88%,
-  auto;
+  background-image:
+    url("../img/text-sedona-index.svg"),
+    url("../img/bg-back-mobile.jpg");
+  background-position:
+    center 146px,
+    center 56px;
+  background-size:
+    88%,
+    auto;
   min-height: 446px;
   width: 320px;
   margin: 0 auto;
   @media @tablet-width {
     min-height: 520px;
     width: 768px;
-    background-image: url("../img/text-sedona-index.svg"),
-    url("../img/bg-back-mobile.jpg");
-    background-position: center 78px,
-    center 6px;
-    background-size: 60%,
-    132%;
+    background-image:
+      url("../img/text-sedona-index.svg"),
+      url("../img/bg-back-mobile.jpg");
+    background-position:
+      center 78px,
+      center 6px;
+    background-size:
+      60%,
+      132%;
   }
   @media @desktop-width {
   }
@@ -51,24 +72,30 @@
 
 .page-header--other .page-header__logo-back {
   background-repeat: no-repeat;
-  background-image: url("../img/text-sedona.svg"),
-  url("../img/bg-back-mobile.jpg");
-  background-position: center 146px,
-  center 56px;
-  background-size: 88%,
-  auto;
+  background-image:
+    url("../img/text-sedona.svg"),
+    url("../img/bg-back-mobile.jpg");
+  background-position:
+    center 146px,
+    center 56px;
+  background-size:
+    88%,
+    auto;
   min-height: 214px;
   width: 320px;
   margin: 0 auto;
   @media @tablet-width {
     min-height: 290px;
     width: 768px;
-    background-image: url("../img/text-sedona.svg"),
-    url("../img/bg-back-mobile.jpg");
-    background-position: center 78px,
-    center 6px;
-    background-size: 60%,
-    132%;
+    background-image:
+      url("../img/text-sedona.svg"),
+      url("../img/bg-back-mobile.jpg");
+    background-position:
+      center 78px,
+      center 6px;
+    background-size:
+      60%,
+      132%;
   }
   @media @desktop-width {
     min-height: 302px;
@@ -119,25 +146,23 @@
   text-align: center;
   @media @tablet-width {
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     padding-left: 140px;
     padding-right: 140px;
   }
   @media @desktop-width {
+    margin-bottom: 0;
   }
 }
 
 .page-header--other .page-header__text {
   line-height: 1.7;
-  margin-bottom: 18px;
   @media @tablet-width {
-    margin-bottom: 68px;
   }
   @media @desktop-width {
     line-height: 1.8;
     padding-left: 380px;
     padding-right: 380px;
-    margin-bottom: 52px;
     margin-top: 26px;
   }
 }
@@ -147,8 +172,7 @@
   border: none;
   height: 17px;
   background: @color-blue-light;
-  background-image:
-  linear-gradient(
+  background-image: linear-gradient(
     to top right,
     transparent 50%,
     white 50%
