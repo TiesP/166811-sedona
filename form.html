@@ -40,22 +40,22 @@
 
     <form class="form" action="/recall" method="post">
       <fieldset class="form__group form__group--introduce">
-        <legend class="form__title">Представьтесь, пожалуйста:</legend>
-        <div class=form__group-wrapper">
+        <legend class="form__title">Представьтесь<span class="form__title-not-tablet">, пожалуйста</span>:</legend>
+        <div class="form__group-wrapper-introduce">
 
-          <div class="form__input-wrapper">
-            <label class="form__label">Имя:</label>
-            <input class="form__value" type="text" name="name" placeholder="Петр">
+          <div class="input">
+            <label class="input__label">Имя:</label>
+            <input class="input__value" type="text" name="name" placeholder="Петр">
           </div>
 
-          <div class="form__input-wrapper">
-            <label class="form__label">Фамилия:</label>
-            <input class="form__value" type="text" name="surname" placeholder="Иванов">
+          <div class="input">
+            <label class="input__label">Фамилия:</label>
+            <input class="input__value" type="text" name="surname" placeholder="Иванов">
           </div>
 
-          <div class="form__input-wrapper">
-            <label class="form__label">Отчество:</label>
-            <input class="form__value" type="text" name="patronymic" placeholder="Александрович">
+          <div class="input">
+            <label class="input__label">Отчество:</label>
+            <input class="input__value" type="text" name="patronymic" placeholder="Александрович">
           </div>
 
         </div>
@@ -65,12 +65,16 @@
         <legend class="form__title">Контактная информация:</legend>
 
         <div class="contact">
-          <label class="contact__label contact__label--phone"><span
-            class="contact__label-phone-not-desktop">Контактный </span>телефон:</label>
-          <input class="contact__value contact__value--phone" type="tel" name="phone" placeholder="Введите телефон">
-          <span class="contact__error-phone">Ошибка, перепроверьте номер</span>
-          <label class="contact__label contact__label--email">Электронная почта:</label>
-          <input class="contact__value contact__value--email" type="email" name="email" placeholder="Введите e-mail">
+          <div class="input input--with-message">
+            <label class="input__label"><span
+              class="input__label-not-desktop">Контактный </span>телефон:</label>
+            <input class="input__value" type="tel" name="phone" placeholder="Введите телефон">
+            <span class="input__error">Ошибка, перепроверьте номер</span>
+          </div>
+          <div class="input input--column2-row">
+            <label class="input__label">Электронная почта:</label>
+            <input class="input__value" type="email" name="email" placeholder="Введите e-mail">
+          </div>
         </div>
 
       </fieldset>

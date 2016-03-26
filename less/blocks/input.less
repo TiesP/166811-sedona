@@ -1,0 +1,149 @@
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  @media @tablet-width {
+    align-items:  baseline;
+  }
+}
+
+.contact .input {
+  @media @desktop-width {
+    width: 50%;
+  }
+}
+
+.input--with-message {
+  flex-direction: column;
+  align-items: flex-start;
+  @media @tablet-width {
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+}
+
+.input--column2-row {
+  flex-direction: column;
+  align-items: flex-start;
+  @media @desktop-width {
+    flex-direction:row;
+    align-items: baseline;
+  }
+}
+
+.input__label {
+  .font-setting-uppercase(14px, normal);
+  margin-top: 20px;
+  margin-right: 18px;
+  box-sizing: border-box;
+  @media @tablet-width {
+    margin-left: 58px;
+  }
+  @media @desktop-width {
+    margin-left: 80px;
+  }
+}
+
+.input--with-message .input__label {
+  margin-top: 23px;
+  margin-left: 21px;
+  @media @tablet-width {
+    margin: 0;
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 50%;
+    order: 1;
+  }
+  @media @desktop-width {
+    width: auto;
+    order: 2;
+    padding: 0;
+    margin-right: 20px;
+  }
+}
+
+.input--column2-row .input__label {
+  margin-top: 18px;
+  margin-left: 21px;
+  @media @tablet-width {
+    margin: 0;
+    margin-top: 25px;
+    padding-left: 20px;
+    width: 100%;
+  }
+  @media @desktop-width {
+    width: auto;
+    padding: 0;
+    margin-right: 20px;
+   }
+}
+
+.input__label-not-desktop {
+  @media @desktop-width {
+    display: none;
+  }
+}
+
+.input__value {
+  .font-setting-uppercase(18px);
+  text-transform: none;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 58px;
+  margin-top: 20px;
+  padding-left: 20px;
+  letter-spacing: -1.6px;
+  background: @color-edit;
+  @media @tablet-width {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+.input--with-message .input__value {
+  margin-top: 10px;
+  @media @tablet-width {
+    order: 3;
+  }
+  @media @desktop-width {
+    width: 315px;
+  }
+}
+
+.input--column2-row .input__value {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  @media @desktop-width {
+    width: 320px;
+    margin-bottom: 0;
+    margin-top: 75px;
+  }
+}
+
+.input__error {
+  .font-setting-uppercase(14px);
+  color: @color-red;
+  text-transform: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  padding-left: 20px;
+  @media @tablet-width {
+    width: 50%;
+    order: 2;
+    margin-top: 30px;
+    text-align: right;
+  }
+  @media @desktop-width {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    margin-left: 85px;
+    margin-top: 45px;
+  }
+}
