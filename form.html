@@ -16,7 +16,8 @@
       <ul class="main-nav__items">
         <li class="main-nav__item"><a class="main-nav__url" href="index.html">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__url" href="photo.html">Фото и видео</a></li>
-        <li class="main-nav__item"><a class="main-nav__url" href="form.html">Форма отзыва</a></li>
+        <li class="main-nav__item main-nav__item--active"><a class="main-nav__url" href="form.html">Форма отзыва</a>
+        </li>
         <li class="main-nav__item"><a class="main-nav__url" href="https://htmlacademy.ru/">Html academy</a></li>
       </ul>
     </nav>
@@ -65,15 +66,16 @@
         <legend class="form__title">Контактная информация:</legend>
 
         <div class="contact">
-          <div class="input input--with-message">
-            <label class="input__label"><span
-              class="input__label-not-desktop">Контактный </span>телефон:</label>
-            <input class="input__value" type="tel" name="phone" placeholder="Введите телефон">
+          <div class="input input--desktop-half-width input--mobile-column input--tablet-column">
             <span class="input__error">Ошибка, перепроверьте номер</span>
+            <label class="input__label"><span class="input__label-not-desktop">Контактный </span>телефон:</label>
+            <input class="input__value" type="tel" name="phone"
+                   placeholder="Введите телефон">
           </div>
-          <div class="input input--column2-row">
+          <div class="input input--desktop-half-width input--mobile-column input--tablet-column">
             <label class="input__label">Электронная почта:</label>
-            <input class="input__value" type="email" name="email" placeholder="Введите e-mail">
+            <input class="input__value" type="email" name="email"
+                   placeholder="Введите e-mail">
           </div>
         </div>
 
@@ -128,7 +130,10 @@
 
       <fieldset class="form__group form__group--center form__group--emotions">
         <legend class="form__title">Опишите свои эмоции:</legend>
-        <textarea class="form__description" placeholder="Опишите подробно все свои восторги"></textarea>
+        <div class="input">
+          <textarea class="input__value input__value--multiline"
+                    placeholder="Опишите подробно все свои восторги"></textarea>
+        </div>
       </fieldset>
 
       <button class="form__button" type="submit">Отправить отзыв</button>

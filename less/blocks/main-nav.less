@@ -53,3 +53,40 @@
     padding-top: 17px;
   }
 }
+
+.main-nav__item--active .main-nav__url {
+  @media @tablet-width {
+    color: @color-menu-active;
+  }
+}
+
+.main-nav__url:hover {
+  background-color: @color-btn-hvr;
+  @media @tablet-width {
+    background-color: @color-white;
+    color: @color-blue-light;
+  }
+}
+
+.main-nav__item--active .main-nav__url:hover {
+  @media @tablet-width {
+    color: @color-menu-active-hvr;
+  }
+}
+
+.main-nav__url:active {
+  background-color: @color-btn-down;
+  color: @color-btn-down-text;
+  @media @tablet-width {
+    background-color: @color-white;
+    color: @color-menu-down;
+  }
+}
+
+.main-nav__item--active .main-nav__url:active {
+  @media @tablet-width {
+    color: @color-menu-active-down;
+  }
+}
+
+
