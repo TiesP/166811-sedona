@@ -1,0 +1,123 @@
+.checkbox {
+  .font-setting-uppercase(18px);
+  text-transform: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  @media @tablet-width {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 18px;
+    padding-left: 34px;
+  }
+  @media @desktop-width {
+    justify-content: space-between;
+    padding-left: 0;
+  }
+}
+
+.checkbox__wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  @media @tablet-width {
+    width: 40%;
+    margin-left: 13px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+  @media @desktop-width {
+    width: 20%;
+    margin-left: 0;
+  }
+}
+
+.checkbox__wrapper:nth-child(1) {
+  margin-top: 0;
+  @media @tablet-width {
+    margin-top: 15px;
+  }
+}
+
+@media @mobile-width-only {
+  .checkbox__wrapper:nth-child(1) {
+    order: 1;
+  }
+
+  .checkbox__wrapper:nth-child(3) {
+    order: 2;
+  }
+
+  .checkbox__wrapper:nth-child(2) {
+    order: 3;
+  }
+
+  .checkbox__wrapper:nth-child(4) {
+    order: 4;
+  }
+}
+
+@media @desktop-width {
+  .checkbox__wrapper:nth-child(1) {
+    width: 22%;
+  }
+
+  .checkbox__wrapper:nth-child(2) {
+    width: 22%;
+  }
+
+  .checkbox__wrapper:nth-child(3) {
+  }
+
+  .checkbox__wrapper:nth-child(4) {
+    width: 22%;
+  }
+
+}
+
+.checkbox__label {
+  margin: 0;
+  display: block;
+  padding: 0;
+  user-select: none;
+}
+
+input + .checkbox__label:before {
+  content: "";
+  display: inline-block;
+  left: 5px;
+  top: 10px;
+  width: 55px;
+  height: 55px;
+  margin-right: 25px;
+  vertical-align: middle;
+  background-color: @color-edit;
+  border-radius: 5px;
+}
+
+input:checked + .checkbox__label:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  margin-left: 17px;
+  margin-top: 16px;
+  vertical-align: middle;
+  width: 18px;
+  height: 10px;
+  border-bottom: 4px solid @color-radio-check;
+  border-left: 4px solid @color-radio-check;
+  transform: rotate(-45deg);
+}
+
+input + .checkbox__label:after {
+  display: none;
+}
+
+.checkbox__value {
+  display: none;
+}
