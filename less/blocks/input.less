@@ -78,7 +78,7 @@
   padding-right: 10px;
   letter-spacing: -1.6px;
   background: @color-edit;
-  border: 5px solid @color-edit;
+  border:none;
   @media @tablet-width {
     margin: 0;
   }
@@ -95,17 +95,58 @@
 
 .input__value:hover {
   background-color: @color-hvr;
-  border-color: @color-hvr;
 }
 
 .input__value:focus {
-  background-color: white;
-  border-color: @color-hvr;
+  border: 5px solid @color-hvr;
+  background-color: @color-white;
 }
 
 .input__value--multiline {
   min-height: 160px;
   padding-top: 15px;
+}
+
+.input__value--icon {
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 60px;
+}
+
+.input__value--icon[type="tel"] {
+  background-image:
+  url("../img/icon-phone.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-edit 53px);
+}
+
+.input__value--icon[type="tel"]:hover {
+  background-image:
+  url("../img/icon-phone.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-hvr 53px);
+}
+
+.input__value--icon[type="tel"]:focus {
+  background-image:
+  url("../img/icon-phone.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-white 53px);
+}
+
+.input__value--icon[type="email"] {
+  background-image:
+  url("../img/icon-mail.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-edit 53px);
+}
+
+.input__value--icon[type="email"]:hover {
+  background-image:
+  url("../img/icon-mail.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-hvr 53px);
+}
+
+.input__value--icon[type="email"]:focus {
+  background-image:
+  url("../img/icon-mail.svg"),
+  linear-gradient(to left, @color-input-icon 53px, @color-white 53px);
 }
 
 .input__error {
