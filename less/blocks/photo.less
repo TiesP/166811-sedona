@@ -1,9 +1,138 @@
+.photo {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 10px;
+  width: 87.5%;
+  @media @tablet-width {
+    width: 84.375%;
+    margin-top: 0;
+  }
+  @media @desktop-width {
+    width: 100%;
+    margin-top: 14px;
+  }
+}
+
+.photo__container-other {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media @tablet-width {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.photo__item {
+  margin: 0;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 18px;
+  width: 100%;
+  @media @tablet-width {
+    width: 50%;
+    padding: 0;
+  }
+  @media @desktop-width {
+    width: 33.3333%;
+    position: relative;
+    height: 268px;
+  }
+}
+
+.photo__item--main {
+  width: 100%;
+  @media @desktop-width {
+    height: 400px;
+  }
+}
+
+.photo__img {
+  width: 100%;
+  height: auto;
+}
+
+.photo__info {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media @tablet-width {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: @color-edit;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  @media @desktop-width {
+    position: absolute;
+    bottom: 0;
+    color: @color-white;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .photo__title {
   .font-setting-uppercase(14px, normal);
   font-weight: bold;
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+  @media @tablet-width {
+    width: 100%;
+    margin-top: 13px;
+  }
+  @media @desktop-width {
+    margin-top: 20px;
+  }
+}
+
+.photo__author {
+  .font-setting-uppercase(14px, normal);
+  text-transform: none;
+  letter-spacing: 0.1px;
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
+  @media @tablet-width {
+    margin-bottom: 18px;
+  }
+  @media @desktop-width {
+  }
 }
 
 .photo__likes {
   .font-setting-uppercase(14px, normal);
   font-weight: bold;
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+  padding-left: 38px;
+  width: 85px;
+  box-sizing: border-box;
+  position: relative;
+  @media @tablet-width {
+    margin-left: auto;
+    margin-top: -7px;
+    padding-left: 32px;
+    background-position: 0px -2px;
+  }
+}
+
+.photo__likes-img {
+  position: absolute;
+  left: 1px;
+  bottom: 2px;
+  fill: @color-like-mobile;
+  @media @tablet-width {
+    fill: @color-like-tablet;
+    bottom: 30px;
+  }
+  @media @desktop-width {
+    fill: @color-white;
+  }
 }

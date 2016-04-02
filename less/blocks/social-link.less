@@ -1,3 +1,34 @@
 .social-link {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.social-link__href {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 0;
   background-color: @color-blue-light;
+}
+
+.social-link__href:hover {
+  background-color: @color-btn-hvr;
+}
+
+.social-link__href:active {
+  background-color: @color-btn-down;
+}
+
+.social-link__img {
+  margin: auto;
+  margin-top: 15px;
+  fill: @color-white;
+}
+
+.social-link__href:active .social-link__img{
+  fill: @color-btn-down-svg;
 }
