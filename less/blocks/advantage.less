@@ -61,14 +61,23 @@
     height: 256px;
     width: 67%;
   }
+  @media @desktop-width {
+    background-position: center center;
+  }
 }
 
 .advantage__photo--first {
   background-image: url("../img/photo-city.jpg");
+  @media @retina {
+    background-image: url("../img/photo-city@2x.jpg");
+  }
 }
 
 .advantage__photo--second {
   background-image: url("../img/photo-bridge.jpg");
+  @media @retina {
+    background-image: url("../img/photo-bridge@2x.jpg");
+  }
 }
 
 .advantage__recommendations {
