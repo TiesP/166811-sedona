@@ -1,3 +1,8 @@
+// работа Меню в мобильной версии реализована без использования JavaScript,
+// поэтому по умолчанию при загрузки страницы меню закрыто
+// во-первых, так остается больше места для контента на мобильном телефоне
+// во-вторых, это более привычный сценарий работы на телефоне
+
 .main-nav {
   background-color: @color-blue-light;
   min-height: 224px;
@@ -8,6 +13,80 @@
   }
   @media @desktop-width {
   }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__toggle-label {
+  display: none;
+}
+
+@media @mobile-width-only {
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav__toggle:checked ~ .main-nav {
+    display: block;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__toggle-label {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    z-index: 10;
+    position: absolute;
+    top: 17px;
+    right: 19px;
+  }
+
+  .main-nav__toggle-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 4px;
+
+    background-color: @color-blue-light;
+    box-shadow: 0 8px 0 0 @color-blue-light,
+    0 16px 0 0 @color-blue-light;
+    transform: rotate(0deg);
+  }
+
+  .main-nav__toggle-label:after {
+    display: none;
+  }
+
+  .main-nav__toggle:checked ~ .main-nav__toggle-label:before,
+  .main-nav__toggle:checked ~ .main-nav__toggle-label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 9px;
+    left: -2px;
+    width: 28px;
+    height: 4px;
+    background-color: @color-white;
+    box-shadow: none;
+  }
+
+  .main-nav__toggle:checked ~ .main-nav__toggle-label::before {
+    transform: rotate(45deg);
+  }
+
+  .main-nav__toggle:checked ~ .main-nav__toggle-label::after {
+    transform: rotate(-45deg);
+  }
+
 }
 
 .main-nav__items {

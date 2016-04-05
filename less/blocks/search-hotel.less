@@ -48,6 +48,7 @@
   margin: 0;
   margin-top: 34px;
   border: none;
+  cursor: pointer;
   @media @tablet-width {
     .font-setting-uppercase(21px, normal);
     width: 458px;
@@ -68,19 +69,37 @@
   color: @color-btn-down-text;
 }
 
-.search-hotel__map {
+#map {
+  //display: none;
   margin-top: 50px;
   width: 100%;
+  min-height: 350px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image:
+    url("../img/icon-map-marker.svg"),
+    url("../img/bg-map-mobile.jpg");
   @media @tablet-width {
     margin-top: 58px;
+    background-image:
+    url("../img/icon-map-marker.svg"),
+    url("../img/bg-map-tablet.jpg");
   }
   @media @desktop-width {
     margin-top: 65px;
+    background-image:
+    url("../img/icon-map-marker.svg"),
+    url("../img/bg-map-desktop.jpg");
   }
 }
 
-.search-hotel__img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+//#map {
+//  width: 100%;
+//  min-height: 350px;
+//}
+
+//.search-hotel__img {
+//  width: 100%;
+//  height: auto;
+//  display: block;
+//}

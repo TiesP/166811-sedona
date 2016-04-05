@@ -4,7 +4,6 @@
   padding-top: 36px;
   width: 100%;
   @media @tablet-width {
-    width: 84.375%;
     padding-top: 58px;
   }
   @media @desktop-width {
@@ -47,9 +46,11 @@
   position: relative;
   font-size: 0;
   @media @tablet-width {
-    width: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
   }
   @media @desktop-width {
+    margin: 0;
   }
 }
 
@@ -128,6 +129,7 @@
 .video__button {
   margin: 22px 0;
   fill: @color-button-mobile;
+  cursor: pointer;
   @media @tablet-width {
     margin-top: 38px;
     margin-bottom: 38px;

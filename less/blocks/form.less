@@ -2,15 +2,10 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0;
-  width: 87.5%;
+  .padding-main();
   @media @tablet-width {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 84.375%;
-  }
-  @media @desktop-width {
-    width: 80%;
   }
 }
 
@@ -117,18 +112,6 @@
   }
 }
 
-.form__group--center .form__title {
-  text-align: center;
-  @media @tablet-width {
-    text-align: center;
-    padding: 0 185px;
-  }
-  @media @desktop-width {
-    text-align: center;
-    padding: 0 340px;
-  }
-}
-
 .form__group--introduce .form__title {
   @media @tablet-width {
     margin-left: 0;
@@ -151,6 +134,57 @@
   margin-bottom: 15px;
 }
 
+
+.form__group--center .form__title {
+  position: relative;
+  text-align: center;
+  @media @tablet-width {
+    display: inline-block;
+    text-align: center;
+    padding: 0 185px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @media @desktop-width {
+    padding: 0 340px;
+    text-align: center;
+  }
+}
+
+.form__group--center .form__title:before,
+.form__group--center .form__title:after {
+  @media @tablet-width {
+    content: '';
+    background-color: @color-border;
+    width: 125px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+  }
+  @media @desktop-width {
+    width: 280px;
+  }
+}
+
+.form__group--center .form__title:before {
+  @media @tablet-width {
+    margin-right: 100px;
+    left: 0;
+  }
+  @media @desktop-width {
+  }
+}
+
+.form__group--center .form__title:after {
+  @media @tablet-width {
+    margin-left: 100px;
+    right: 0;
+  }
+  @media @desktop-width {
+  }
+}
+
 .form__note {
   display: none;
   @media @tablet-width {
@@ -171,6 +205,7 @@
   margin: 0 auto;
   margin-top: 30px;
   border: none;
+  cursor: pointer;
   @media @tablet-width {
     .font-setting-uppercase(21px, normal);
     width: 324px;

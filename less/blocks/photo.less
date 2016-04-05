@@ -1,14 +1,12 @@
 .photo {
   margin: 0 auto;
-  padding: 0;
   margin-top: 10px;
-  width: 87.5%;
+  .padding-main();
   @media @tablet-width {
-    width: 84.375%;
     margin-top: 0;
   }
   @media @desktop-width {
-    width: 100%;
+    padding: 0;
     margin-top: 14px;
   }
 }
@@ -129,6 +127,7 @@
   left: 1px;
   bottom: 2px;
   fill: @color-like-mobile;
+  cursor: pointer;
   @media @tablet-width {
     fill: @color-like-tablet;
     bottom: 30px;

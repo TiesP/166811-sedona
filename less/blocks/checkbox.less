@@ -84,6 +84,7 @@
   display: block;
   padding: 0;
   user-select: none;
+  cursor: pointer;
 }
 
 input + .checkbox__label:before {
@@ -112,6 +113,18 @@ input:checked + .checkbox__label:after {
   border-bottom: 4px solid @color-radio-check;
   border-left: 4px solid @color-radio-check;
   transform: rotate(-45deg);
+}
+
+.checkbox__wrapper:hover .checkbox__label:before{
+  background: @color-hvr;
+}
+
+.checkbox__wrapper:active .checkbox__label:before{
+  background: @color-down;
+}
+
+.checkbox__wrapper:active input:checked + .checkbox__label:after {
+  border-color: @color-down-check;
 }
 
 input + .checkbox__label:after {
