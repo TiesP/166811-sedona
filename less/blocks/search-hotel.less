@@ -48,6 +48,7 @@
   margin: 0;
   margin-top: 34px;
   border: none;
+  cursor: pointer;
   @media @tablet-width {
     .font-setting-uppercase(21px, normal);
     width: 458px;
@@ -68,19 +69,43 @@
   color: @color-btn-down-text;
 }
 
-.search-hotel__map {
+.search-hotel__button:disabled {
+  background-color: @color-hvr;
+  color: @color-white;
+}
+
+#map {
   margin-top: 50px;
   width: 100%;
+  min-height: 350px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image:
+    url("../img/icon-map-marker.svg"),
+    url("../img/bg-map-mobile.jpg");
   @media @tablet-width {
     margin-top: 58px;
+    background-image:
+      url("../img/icon-map-marker.svg"),
+      url("../img/bg-map-tablet.jpg");
   }
   @media @desktop-width {
     margin-top: 65px;
+    background-image:
+      url("../img/icon-map-marker.svg"),
+      url("../img/bg-map-desktop.jpg");
   }
 }
 
-.search-hotel__img {
-  width: 100%;
-  height: auto;
-  display: block;
+.search-hotel__button--in-progress {
+  animation: in-progress 1s infinite alternate;
+}
+
+@keyframes in-progress {
+  from {
+    background-color: @color-btn-down;
+  }
+  to {
+    background-color: @color-in-progress;
+  }
 }

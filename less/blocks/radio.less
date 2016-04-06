@@ -29,6 +29,7 @@
   padding: 0;
   display: block;
   user-select: none;
+  cursor: pointer;
 }
 
 input + .radio__label:before {
@@ -47,7 +48,22 @@ input:checked + .radio__label:before {
   background: @color-radio-check;
 }
 
-input:checked + .radio__label {
+.radio__wrapper:hover .radio__label:before{
+  background: @color-hvr;
+  border-color: @color-hvr;
+}
+
+.radio__wrapper:hover input:checked + .radio__label:before {
+  background: @color-radio-check;
+}
+
+.radio__wrapper:active .radio__label:before{
+  background: @color-down;
+  border-color: @color-down;
+}
+
+.radio__wrapper:active input:checked + .radio__label:before {
+  background: @color-down-check;
 }
 
 .radio__value {
