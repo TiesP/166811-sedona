@@ -23,6 +23,3 @@ ymaps.ready(function () {
 
   myMap.geoObjects.add(myPlacemark);
 });
-
-//map = document.getElementById('map');
-//map.style.background='none';
