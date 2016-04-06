@@ -69,6 +69,11 @@
   color: @color-btn-down-text;
 }
 
+.search-hotel__button:disabled {
+  background-color: @color-hvr;
+  color: @color-white;
+}
+
 #map {
   margin-top: 50px;
   width: 100%;
@@ -89,5 +94,18 @@
     background-image:
       url("../img/icon-map-marker.svg"),
       url("../img/bg-map-desktop.jpg");
+  }
+}
+
+.search-hotel__button--in-progress {
+  animation: in-progress 1s infinite alternate;
+}
+
+@keyframes in-progress {
+  from {
+    background-color: @color-btn-down;
+  }
+  to {
+    background-color: @color-in-progress;
   }
 }

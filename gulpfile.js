@@ -41,7 +41,6 @@ gulp.task("serve", ["build"], function() {
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-
 });
 
 gulp.task("images", function() {
@@ -51,6 +50,11 @@ gulp.task("images", function() {
       progressive: true
     }))
     .pipe(gulp.dest("build/img"))
+});
+
+gulp.task("copy-html", function() {
+  gulp.src("*.html")
+    .pipe(copy("build"));
 });
 
 gulp.task("copy", function() {
