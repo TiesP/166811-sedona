@@ -25,11 +25,12 @@
 
 @media @mobile-width-only {
   .main-nav {
-    display: none;
+    margin-top: -224px;
+    transition: margin-top .25s linear;
   }
 
   .main-nav__toggle:checked ~ .main-nav {
-    display: block;
+    margin-top: 0px;
   }
 
   .main-nav__toggle {
@@ -40,11 +41,17 @@
     display: block;
     width: 40px;
     height: 40px;
+    margin-top: 224px;
+    transition: margin-top .25s linear;
 
     z-index: 10;
     position: absolute;
     top: 8px;
     right: 10px;
+  }
+
+  .main-nav__toggle:checked ~ .main-nav__toggle-label {
+    margin-top: 0px;
   }
 
   .main-nav__toggle-label::before {
