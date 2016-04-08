@@ -78,9 +78,7 @@
   padding-right: 10px;
   letter-spacing: -1.6px;
   background: @color-edit;
-  border:none;
-  border-right: 5px solid @color-edit;
-  border-left: 5px solid @color-edit;
+  border: 5px solid @color-edit;
   @media @tablet-width {
     margin: 0;
   }
@@ -91,7 +89,7 @@
     order: 3;
   }
   @media @desktop-width {
-    width: 317px;
+    width: 316px;
   }
 }
 
@@ -114,7 +112,9 @@
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 60px;
+    border:none;
     border-right: 5px solid @color-hvr;
+    border-left: 5px solid @color-edit;
 }
 
 .input__value--icon[type="tel"] {
